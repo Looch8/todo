@@ -1,4 +1,5 @@
-class CreateTodo {
+// TODO - maybe convert this to factory function instead of classes
+class Todo {
 	constructor(title, description, dueDate) {
 		this.title = title;
 		this.description = description;
@@ -6,4 +7,4 @@ class CreateTodo {
 	}
 }
 
-export default CreateTodo;
+export default Todo;
