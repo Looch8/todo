@@ -1,1 +1,1 @@
-(()=>{"use strict";const o=new class{constructor(o,s,t){this.title=o,this.description=s,this.dueDate=t}}("chores","Clean my room","22/3/24");console.log(o),console.log(o.description)})();
+(()=>{"use strict";const e={title:"chores",description:"cleaning",dueDate:"now"};console.log(e)})();

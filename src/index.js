@@ -1,9 +1,13 @@
-import Todo from "./todo";
+import createTodo from "./createTodo";
 
-const todo = new Todo("chores", "Clean my room", "22/3/24");
-console.log(todo);
+// Factory
+const newTodo = createTodo("chores", "cleaning", "now");
+console.log(newTodo);
 
-console.log(todo.description);
+// const todo = new Todo("chores", "Clean my room", "22/3/24");
+// console.log(todo);
+
+// console.log(todo.description);
 
 // TODO
 // Make array to push new todo objects
