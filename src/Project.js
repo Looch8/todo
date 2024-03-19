@@ -1,3 +1,25 @@
+function project() {
+	const todos = [];
+	// add todos to todo array
+	const addTodo = (todo) => {
+		todos.push(todo);
+	};
+	// add todos array to project array
+	const addProject = () => {
+		const project = {
+			todos,
+			addTodo,
+		};
+		projects.push(project);
+		return project;
+	};
+	return {
+		addProject,
+	};
+}
+
+const projects = [];
+
 export default project;
 
 // So, this seems very manual. I feel like it would probably be nice if projects.js exported a function that just did all the steps to add a project to the projects array for you. That way you could just make a simple function call.

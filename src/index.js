@@ -1,25 +1,5 @@
 import Todo from "./Todo";
-// import project from "./Project";
-
-function project() {
-	const todos = [];
-	const addTodo = (todo) => {
-		todos.push(todo);
-	};
-	const addProject = () => {
-		const project = {
-			todos,
-			addTodo,
-		};
-		projects.push(project);
-		return project;
-	};
-	return {
-		addProject,
-	};
-}
-
-const projects = [];
+import project from "./Project";
 
 const project1 = project().addProject();
 const project2 = project().addProject();
@@ -33,6 +13,7 @@ project1.addTodo(todo1);
 project1.addTodo(todo2);
 project2.addTodo(todo3);
 project2.addTodo(todo4);
+project2.addTodo(todo1);
 
 console.log(project1);
 console.log(project2);
