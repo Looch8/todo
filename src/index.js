@@ -1,20 +1,10 @@
-import createTodo from "./createTodo";
+import Todo from "./Todo";
+import project from "./Project";
 
-// Factory
-const newTodo = createTodo("chores", "cleaning", "now");
-console.log(newTodo);
+const todo1 = new Todo("chores", "cleaning", "now");
+const todo2 = new Todo("walk", "30 minutes", "today");
+project(todo1);
+project(todo2);
+console.log(project());
 
-// const todo = new Todo("chores", "Clean my room", "22/3/24");
-// console.log(todo);
-
-// console.log(todo.description);
-
-// TODO
-// Make array to push new todo objects
-// todoArray = [];
-
-// todoArray.push(todo);
-// console.log(todoArray);
-
-// const fruits = ["Banana", "Orange", "Apple", "Mango"];
-// fruits.push("Kiwi");
+// Your todo list should have projects or separate lists of todos. When a user first opens the app, there should be some sort of ‘default’ project to which all of their todos are put. Users should be able to create new projects and choose which project their todos go into.

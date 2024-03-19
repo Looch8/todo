@@ -1,1 +1,1 @@
-(()=>{"use strict";const e={title:"chores",description:"cleaning",dueDate:"now"};console.log(e)})();
+(()=>{"use strict";const t=class{constructor(t,s,e){this.title=t,this.description=s,this.dueDate=e}},s=function(t){let s=[];return t&&s.push(t),console.log(s),s},e=new t("chores","cleaning","now"),n=new t("walk","30 minutes","today");s(e),s(n),console.log(s())})();
