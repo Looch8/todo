@@ -1,29 +1,42 @@
 import Todo from "./Todo";
 // import project from "./Project";
 
-const todo1 = new Todo("chores", "cleaning", "now");
-const todo2 = new Todo("walk", "30 minutes", "today");
-
 function project() {
 	const todos = [];
 	const addTodo = (todo) => {
 		todos.push(todo);
 	};
+	const addProject = () => {
+		const project = {
+			todos,
+			addTodo,
+		};
+		projects.push(project);
+		return project;
+	};
 	return {
-		todos,
-		addTodo,
+		addProject,
 	};
 }
 
 const projects = [];
 
-const project1 = project();
-projects.push(project1);
+const project1 = project().addProject();
+const project2 = project().addProject();
+
+const todo1 = new Todo("chores", "cleaning", "now");
+const todo2 = new Todo("walk", "30 minutes", "today");
+const todo3 = new Todo("test", "description", "21/4/25");
+const todo4 = new Todo("another test", "description again", "now");
 
 project1.addTodo(todo1);
 project1.addTodo(todo2);
+project2.addTodo(todo3);
+project2.addTodo(todo4);
 
 console.log(project1);
+console.log(project2);
+
 // This is all about what you want to do, and the plan that you're making.
 // You know you need to:
 // - store lists (or 'projects') and be able to create new ones
