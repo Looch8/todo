@@ -1,1 +1,1 @@
-(()=>{"use strict";const t=class{constructor(t,s,e){this.title=t,this.description=s,this.dueDate=e}},s=function(t){let s=[];return t&&s.push(t),console.log(s),s},e=new t("chores","cleaning","now"),n=new t("walk","30 minutes","today");s(e),s(n),console.log(s())})();
+(()=>{"use strict";const t=class{constructor(t,s,n){this.title=t,this.description=s,this.dueDate=n}};let s=[];const n=function(t){return t&&s.push(t),s},e=new t("chores","cleaning","now"),o=new t("walk","30 minutes","today");n(e),n(o),console.log(n())})();

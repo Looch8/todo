@@ -1,9 +1,10 @@
+// List all todos
+let listOfTodos = [];
+
 function project(todo) {
-	let listOfTodos = [];
 	if (todo) {
 		listOfTodos.push(todo);
 	}
-	console.log(listOfTodos);
 
 	return listOfTodos;
 }
