@@ -1,20 +1,22 @@
-import Todo from "./Todo";
-import project from "./Project";
+// import Todo from "./Todo";
+// import project from "./Project";
+import todo from "./todos";
+import projects from "./projects";
 
-const project1 = project().addProject();
-const project2 = project().addProject();
+const todo1 = todo("title1", "desc 1", "date 1");
+const todo2 = todo("title2", "desc 2", "date 2");
+const todo3 = todo("title3", "desc 3", "date 3");
+const todo4 = todo("title4", "desc 4", "date 4");
 
-const todo1 = new Todo("chores", "cleaning", "now");
-const todo2 = new Todo("walk", "30 minutes", "today");
-const todo3 = new Todo("test", "description", "21/4/25");
-const todo4 = new Todo("another test", "description again", "now");
+const project1 = projects();
+const project2 = projects();
 
-project1.addTodo(todo1);
-project1.addTodo(todo2);
-project2.addTodo(todo3);
-project2.addTodo(todo4);
-project2.addTodo(todo1);
-
+project1.addProject();
+project2.addProject();
+project1.addTodo(0, todo1);
+project2.addTodo(0, todo2);
+project2.addTodo(0, todo3);
+project1.addTodo(1, todo4);
 console.log(project1);
 console.log(project2);
 
