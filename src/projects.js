@@ -1,21 +1,22 @@
-function projects() {
+function project() {
 	// add a new list
-	const project = [];
-
-	function addProject() {
-		project.push([]);
-	}
+	const list = [];
 
 	// add todo to specific list
-	function addTodo(projectIndex, todoData) {
-		project[projectIndex].push(todoData);
+	function addTodo(todoData) {
+		list.push(todoData);
+	}
+
+	// delete a todo from a specific list
+	function deleteTodo(todoIndex) {
+		list.delete(todoIndex);
 	}
 
 	return {
-		project,
-		addProject,
+		list,
 		addTodo,
+		deleteTodo,
 	};
 }
 
-export default projects;
+export default project;

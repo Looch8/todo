@@ -11,12 +11,10 @@ const todo4 = todo("title4", "desc 4", "date 4");
 const project1 = projects();
 const project2 = projects();
 
-project1.addProject();
-project2.addProject();
-project1.addTodo(0, todo1);
-project2.addTodo(0, todo2);
-project2.addTodo(0, todo3);
-project1.addTodo(0, todo4);
+project1.addTodo(todo1);
+project2.addTodo(todo2);
+project2.addTodo(todo3);
+project1.addTodo(todo4);
 console.log(project1);
 console.log(project2);
 
