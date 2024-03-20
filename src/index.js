@@ -16,7 +16,7 @@ project2.addProject();
 project1.addTodo(0, todo1);
 project2.addTodo(0, todo2);
 project2.addTodo(0, todo3);
-project1.addTodo(1, todo4);
+project1.addTodo(0, todo4);
 console.log(project1);
 console.log(project2);
 
