@@ -9,7 +9,8 @@ function project() {
 
 	// delete a todo from a specific list
 	function deleteTodo(todoIndex) {
-		list.delete(todoIndex);
+		// delete only one element by taking array index, and having second argument as 1, so only 1 element is remobed.
+		list.splice(todoIndex, 1);
 	}
 
 	return {

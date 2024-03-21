@@ -17,6 +17,8 @@ project2.addTodo(todo3);
 project1.addTodo(todo4);
 console.log(project1);
 console.log(project2);
+project1.deleteTodo(1);
+console.log(project1);
 
 // This is all about what you want to do, and the plan that you're making.
 // You know you need to:
