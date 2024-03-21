@@ -5,7 +5,7 @@ function projects() {
 
 	// add a new project object
 	function addProject(project) {
-		projects.push({ project });
+		projects.push(project);
 	}
 
 	// delete a todo from a specific list
