@@ -1,6 +1,5 @@
-// import Todo from "./Todo";
-// import project from "./Project";
 import todo from "./todos";
+import project from "./project";
 import projects from "./projects";
 
 const todo1 = todo("title1", "desc 1", "date 1");
@@ -8,17 +7,36 @@ const todo2 = todo("title2", "desc 2", "date 2");
 const todo3 = todo("title3", "desc 3", "date 3");
 const todo4 = todo("title4", "desc 4", "date 4");
 
-const project1 = projects();
-const project2 = projects();
+const project1 = project();
+const project2 = project();
+const project3 = project();
+
+// projects instance to manage projects
+const manageProjects = projects();
+
+manageProjects.addProject(project1);
+manageProjects.addProject(project2);
+manageProjects.deleteProject(0);
+console.log(manageProjects);
 
 project1.addTodo(todo1);
 project2.addTodo(todo2);
 project2.addTodo(todo3);
 project1.addTodo(todo4);
-console.log(project1);
-console.log(project2);
-project1.deleteTodo(1);
-console.log(project1);
+project3.addTodo(todo3);
+// console.log(project1);
+// console.log(project2);
+// project1.deleteTodo(1);
+// console.log(project1);
+
+// projects.addProject(project1);
+// projects.addProject(project2);
+// console.log(projects);
+
+// console.log(project1);
+// console.log(project().addProject(project1));
+// console.log(project().addProject(project2));
+// console.log(project());
 
 // This is all about what you want to do, and the plan that you're making.
 // You know you need to:

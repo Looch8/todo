@@ -1,23 +1,24 @@
-function project() {
+// Manage multiple projects
+function projects() {
 	// add a new list
-	const list = [];
+	const projects = [];
 
-	// add todo to specific list
-	function addTodo(todoData) {
-		list.push(todoData);
+	// add a new project object
+	function addProject(project) {
+		projects.push({ project });
 	}
 
 	// delete a todo from a specific list
-	function deleteTodo(todoIndex) {
-		// delete only one element by taking array index, and having second argument as 1, so only 1 element is remobed.
-		list.splice(todoIndex, 1);
+	function deleteProject(projectIndex) {
+		// delete only one element by taking array index, and having second argument as 1, so only 1 element is removed.
+		projects.splice(projectIndex, 1);
 	}
 
 	return {
-		list,
-		addTodo,
-		deleteTodo,
+		projects,
+		addProject,
+		deleteProject,
 	};
 }
 
-export default project;
+export default projects;
