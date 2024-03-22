@@ -14,22 +14,26 @@ const projectManager = projects();
 // Add new project function
 const addNewProject = () => projectManager.addProject(project());
 
-addNewProject();
-addNewProject();
-addNewProject();
-addNewProject();
-addNewProject();
-
 // add new Todo function
-const addNewTodo = (projectIndex, title, description, dueDate) => {
-	projectManager.projects[projectIndex].addTodo(title, description, dueDate);
+const addNewTodo = (projectIndex, title, description, dueDate, priority) => {
+	projectManager.projects[projectIndex].addTodo(
+		title,
+		description,
+		dueDate,
+		priority
+	);
 };
 
+addNewProject();
+addNewProject();
+addNewProject();
+addNewProject();
+addNewProject();
+
 // Adding new todo
-addNewTodo(3, "hello", "random", "random date");
+addNewTodo(3, "hello", "random", "random date", "low");
 console.log(projectManager);
 
-// This is the way to add todos now
 // projectManager.projects[0].addTodo("newer title", "newer desc", "newer date");
 // projectManager.projects[0].addTodo("title 2", "desc 2", "date 2");
 // projectManager.projects[2].addTodo(
