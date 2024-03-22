@@ -24,6 +24,10 @@ const addNewTodo = (projectIndex, title, description, dueDate, priority) => {
 	);
 };
 
+// Delete a todo
+const deleteTodo = (projectIndex, todoIndex) =>
+	projectManager.projects[projectIndex].deleteTodo(todoIndex);
+
 addNewProject();
 addNewProject();
 addNewProject();
@@ -32,7 +36,10 @@ addNewProject();
 
 // Adding new todo
 addNewTodo(3, "hello", "random", "random date", "low");
+addNewTodo(3, "bye", "random", "random date", "low");
+
 console.log(projectManager);
+deleteTodo(3, 1);
 
 // projectManager.projects[0].addTodo("newer title", "newer desc", "newer date");
 // projectManager.projects[0].addTodo("title 2", "desc 2", "date 2");
