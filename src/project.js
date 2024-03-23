@@ -4,8 +4,9 @@ function project() {
 	const list = [];
 
 	// add todo data
-	function addTodo(title, description, dueDate, priority) {
-		const todoData = { title, description, dueDate, priority };
+	function addTodo(title, description, dueDate, priority, isComplete) {
+		isComplete = false;
+		const todoData = { title, description, dueDate, priority, isComplete };
 		list.push(todoData);
 	}
 

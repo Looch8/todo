@@ -32,6 +32,11 @@ const deleteTodo = (projectIndex, todoIndex) =>
 const deleteProject = (projectIndex) =>
 	projectManager.deleteProject(projectIndex);
 
+// Mark todo as complete
+const markTodoComplete = (projectIndex, listIndex) => {
+	projectManager.projects[projectIndex].list[listIndex].isComplete = true;
+};
+
 addNewProject();
 addNewProject();
 addNewProject();
@@ -42,10 +47,12 @@ addNewProject();
 addNewTodo(3, "hello", "random", "random date", "low");
 addNewTodo(3, "bye", "random", "random date", "low");
 
-console.log(projectManager);
-deleteTodo(3, 1);
-deleteProject(0);
-console.log(projectManager);
+markTodoComplete(3, 0);
+
+console.log(projectManager.projects[3].list);
+// console.log((projectManager.projects[3].list[0].isComplete = true));
+// deleteTodo(3, 1);
+// deleteProject(0);
 
 // projectManager.projects[0].addTodo("newer title", "newer desc", "newer date");
 // projectManager.projects[0].addTodo("title 2", "desc 2", "date 2");
