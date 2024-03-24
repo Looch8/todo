@@ -1,6 +1,15 @@
-const content = document.querySelector("#content");
+import projects from "./projects";
+import project from "./project";
+import projectManager from ".";
+import todo from "./todos";
 
-console.log(content);
+const projectDOM = (content) => {
+	content = document.querySelector("#content");
+	const div = document.createElement("div");
+	div.textContent = new todo("hi", "hello", "bye");
+	content.append(div);
 
-export default content;
-content.textContent = "hello";
+	return content;
+};
+
+export default projectDOM;

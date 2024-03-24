@@ -1,7 +1,7 @@
 import todo from "./todos";
 import project from "./project";
 import projects from "./projects";
-import content from "./ui";
+import projectDOM from "./ui";
 
 // Hardcode todos for testing - can remove later
 const todo1 = todo("title1", "desc 1", "date 1");
@@ -51,3 +51,9 @@ addNewTodo(3, "hello", "random", "random date", "low");
 addNewTodo(3, "bye", "random", "random date", "low");
 
 markTodoComplete(3, 0);
+
+// Project DOM content
+
+projectDOM();
+
+export default projectManager;
